@@ -5,7 +5,7 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    container: cypress/browsers:chrome69
+    container: cypress/browsers:node16.14.0-chrome99-ff97
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -15,5 +15,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           build: npm run build
-          start: npm run test
+          start: npx cypress lightBox/cypress/integration/3-test-lightbox
         
