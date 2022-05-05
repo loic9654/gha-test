@@ -15,4 +15,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           build: npm run build
-          start: npm start
+          start: npm run test
+        
